@@ -1,0 +1,56 @@
+header {
+    background-color: lightseagreen;
+    width: auto;
+    height: 15%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+header a {
+    text-decoration: none;
+    font-size: 35px;
+    padding: 10px;
+    border-radius: 20px;
+}
+header a:hover{
+    color: #927f12;
+    background-color: darkblue;
+
+}
+header img {
+    padding: 10px;
+}
+main {
+    background-color: darkseagreen;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;            
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+  text-align: right;
+  margin-right: 20px;
+}
+p {
+  display: flex;
+  flex-direction: row;
+}
+.loginBtn {
+  margin-bottom: 20px;
+  background-color: blue;
+  color: white;
+}
