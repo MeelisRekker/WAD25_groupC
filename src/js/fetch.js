@@ -47,7 +47,13 @@ window.onload = function() {
                 let postMessage = document.createElement("p");
                 let img = this.document.createElement("img");
 
-                defaultIcon.src = "../../img/userLogo.png";
+                if (json[i].posterGender == "Female"){
+                    defaultIcon.src = "../../img/female-icon-7893.png";
+                } else if (json[i].posterGender == "Male") {
+                    defaultIcon.src = "../../img/male-icon-7907.jpg";
+                } else {
+                    defaultIcon.src = "../../img/userLogo.png";
+                }
                 likeIcon.src = "../../img/likeIcon.png";
                 transportIcon.src = "../../img/carIcon.png";
 
