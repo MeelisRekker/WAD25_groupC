@@ -1,6 +1,6 @@
 window.onload = function() {
-    fetch('../../res/json/posts.json')
-    //fetch('https://api.jsonbin.io/v3/b/690a278b43b1c97be9988aed?meta=false')
+    //fetch('../../res/json/posts.json')
+    fetch('https://api.jsonbin.io/v3/b/690a278b43b1c97be9988aed?meta=false')
         .then((response) => response.json())
         .then(json => {            
             console.log(json);
