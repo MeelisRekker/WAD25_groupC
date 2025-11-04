@@ -41,6 +41,7 @@ window.onload = function() {
 
                 let post = document.createElement("div");
                 let postHead = document.createElement("div");
+                let nameAndAge = document.createElement("p");
                 let date = document.createElement("p");
                 let postMessage = document.createElement("p");
                 let img = this.document.createElement("img");
@@ -48,10 +49,12 @@ window.onload = function() {
                 defaultIcon.src = "../../img/userLogo.png";
                 likeIcon.src = "../../img/likeIcon.png";
 
+                nameAndAge.innerText = json[i].posterName +"("+json[i].posterAge+")";
                 date.innerText = json[i].postDate;
                 postMessage.innerText = json[i].postMessage;
 
                 postHead.appendChild(defaultIcon);
+                postHead.appendChild(nameAndAge);
                 postHead.appendChild(date);
                 post.appendChild(postHead);
 
