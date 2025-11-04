@@ -16,3 +16,4 @@
 
 ## JSON
 - https://api.jsonbin.io/v3/b/690a278b43b1c97be9988aed?meta=false
+- Validation green at JSONLint website
