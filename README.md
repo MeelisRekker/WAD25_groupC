@@ -1,5 +1,3 @@
-# This is homework assignment for Web Application Development course on year 2025. Work is performed by group C on PS7.
-
 # Project members:
    - Meelis Rekker
    - Egon Vaiknemets
@@ -11,3 +9,10 @@
 - https://wallpapers.com/background/free-background-kx6msnemub2vv0aw.html
 ## Background pattern by LAXMI SHANKAR Pandey:
 - https://all-free-download.com/free-vector/download/vector_seamless_pattern_stylish_modern_texture_repeating_geometric_design_6820342.html
+## Icons
+- car: https://toppng.com/show_download/237746/car-icon-city-car
+- male: https://www.freeiconspng.com/img/7907
+- female: https://www.freeiconspng.com/img/7893
+
+## JSON
+- https://api.jsonbin.io/v3/b/690a278b43b1c97be9988aed?meta=false

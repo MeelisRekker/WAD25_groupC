@@ -136,6 +136,9 @@ p {
     cursor: pointer;
     max-width: 10%;
 }
+.transport {
+    max-width: 5%;
+}
 .post > img {
     border-radius: 20px;
     margin-top: 10px;

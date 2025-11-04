@@ -38,6 +38,7 @@ window.onload = function() {
             for(i=0; i<json.length; i++){
                 let defaultIcon = document.createElement("img");
                 let likeIcon = document.createElement("img");
+                let transportIcon = document.createElement("img");
 
                 let post = document.createElement("div");
                 let postHead = document.createElement("div");
@@ -48,6 +49,7 @@ window.onload = function() {
 
                 defaultIcon.src = "../../img/userLogo.png";
                 likeIcon.src = "../../img/likeIcon.png";
+                transportIcon.src = "../../img/carIcon.png";
 
                 nameAndAge.innerText = json[i].posterName +"("+json[i].posterAge+")";
                 date.innerText = json[i].postDate;
@@ -60,6 +62,7 @@ window.onload = function() {
 
                 post.className = "post";
                 likeIcon.className = "like";
+                transportIcon.className = "transport";
                 date.className = "date";
                 postHead.className = "postHead";
                 postMessage.className = "postMessage";
@@ -69,8 +72,15 @@ window.onload = function() {
                     post.appendChild(img)
                 }
 
+                if(json[i].posterTransport == "yes"){
+                    transportIcon.style.backgroundColor = "green";
+                }else{
+                    transportIcon.style.backgroundColor = "red";
+                }
+
                 post.appendChild(postMessage);
                 post.appendChild(likeIcon);
+                post.appendChild(transportIcon);
 
                 document.getElementById("posts").appendChild(post)
             }
