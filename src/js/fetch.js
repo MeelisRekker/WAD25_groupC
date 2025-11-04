@@ -1,8 +1,40 @@
 window.onload = function() {
     fetch('../../res/json/posts.json')
+    //fetch('https://api.jsonbin.io/v3/b/690a278b43b1c97be9988aed?meta=false')
         .then((response) => response.json())
-        .then(json => {
+        .then(json => {            
             console.log(json);
+
+            //Tried to solve header creation by script, didn't show
+
+            /*
+            let header = document.createElement("header");
+            let links = document.createElement("div");
+            links.className = "links";
+            var indeksLink = document.createElement("a");
+            var indeksLinkText = document.createTextNode("Home");
+            indeksLink.appendChild(indeksLinkText);
+            indeksLink.href = "index.html";
+            var addPostLink = document.createElement("a");
+            var addPostText = document.createTextNode("addPost");
+            indeksLink.appendChild(addPostText);
+            addPostLink.href = "addPost.html";
+
+            var loginLink = document.createElement("a");
+            var userLogoImg = document.createElement('img');
+            userLogoImg.setAttribute("src",'img/userLogo.png');
+            loginLink.appendChild(userLogoImg);            
+            loginLink.href = "Login.html";            
+
+            header.appendChild(loginLink);
+            header.appendChild(links);
+            links.appendChild(indeksLink);
+            links.appendChild(addPostLink);
+
+            document.body.appendChild(header);
+            **/
+
+
             for(i=0; i<json.length; i++){
                 let defaultIcon = document.createElement("img");
                 let likeIcon = document.createElement("img");
@@ -40,6 +72,44 @@ window.onload = function() {
                 document.getElementById("posts").appendChild(post)
             }
         })
+        .catch(err => {
+            let errorDiv = document.createElement("div");
+            errorDiv.className = 'errorPost';
+            errorDiv.innerText = "error";
+            document.body.appendChild(errorDiv);
+        }) 
+        .finally(() => {
+            let footer = document.createElement("footer");
+            let emptyDiv = document.createElement("div");
+            let teamName = document.createTextNode("By WAD groupC");
 
+            footer.appendChild(emptyDiv);
+            footer.appendChild(teamName);
+            footer.appendChild(emptyDiv);
+        
+            document.body.appendChild(footer);
 
+            //Add listener to userLogo image
+            document.getElementById('userLogo').addEventListener('click', toggleDropdown);
+        })
+    
+        //Visibility event
+        function toggleDropdown(event) {
+            event.preventDefault(); //Disable link on default
+            const dropdownMenu = document.getElementById('dropdownMenu');            
+            //Toggle classList attribute
+            dropdownMenu.classList.toggle('show');
+        }
+        
+        //Add listener to close dropdown when clicked outside of its area
+        window.addEventListener('click', function(event) {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const userLogo = document.getElementById('userLogo');
+    
+            //Boolean logic check if click was outside of dropdown menu area
+            if (!userLogo.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                //Remove classList attribute on successfull boolean check
+                dropdownMenu.classList.remove('show');
+            }
+    });
 }

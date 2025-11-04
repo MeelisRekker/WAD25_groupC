@@ -6,19 +6,28 @@
     <meta name="imageOrigins" content="Wallpapers.com users: robw61, stomatolog.borisov">
     <meta name="backgroundPattern" content="from all-free-downloads.com: LAXMI SHANKAR Pandey">
     <link rel="stylesheet" href="res/css/styles.css">
-    <script type="text/javascript" src="src/js/fetch.js"></script>
+    <script type="text/javascript" src="src/js/fetch.js" defer></script>
     <title>Home</title>
   </head>
   <body>
+    
     <header>
       <div class="links">
         <a href="index.html">Home</a>
         <a href="addPost.html">addPost</a>
       </div>
-      <a href="Login.html">
-        <img src="img/userLogo.png" alt="User">
-      </a>
+      <div class = "dropdown">
+        <a href="Login.html">
+          <img id = "userLogo" src="img/userLogo.png" alt="User">
+        </a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="Login.html"><p class="userName">Username</p></a>
+          <p class="userEmail">Username@server.ee</p>
+          <a href="Login.html">Logout</a>
+        </div>
+      </div>
     </header>
+    
     <div class="mainPage">
       <aside></aside>
       <div id="posts">
@@ -26,10 +35,12 @@
       </div>
       <aside></aside>
     </div>
+    <!--
       <footer>
         <div></div>
-      <div>By WAD groupC</div>
-      <div></div>
+        <div>By WAD groupC</div>
+        <div></div>
     </footer>
+    -->
   </body>
 </html>
