@@ -46,6 +46,7 @@ window.onload = function() {
                 let date = document.createElement("p");
                 let postMessage = document.createElement("p");
                 let img = this.document.createElement("img");
+                let designation = this.document.createElement("text");
 
                 if (json[i].posterGender == "Female"){
                     defaultIcon.src = "../../img/female-icon-7893.png";
@@ -59,6 +60,7 @@ window.onload = function() {
 
                 nameAndAge.innerText = json[i].posterName +"("+json[i].posterAge+")";
                 date.innerText = json[i].postDate;
+                designation.innerText = json[i].posterDesignation;
                 postMessage.innerText = json[i].postMessage;
 
                 postHead.appendChild(defaultIcon);
@@ -87,6 +89,7 @@ window.onload = function() {
                 post.appendChild(postMessage);
                 post.appendChild(likeIcon);
                 post.appendChild(transportIcon);
+                post.appendChild(designation);
 
                 document.getElementById("posts").appendChild(post)
             }
