@@ -49,14 +49,14 @@ window.onload = function() {
                 let designation = this.document.createElement("text");
 
                 if (json[i].posterGender == "Female"){
-                    defaultIcon.src = "../../img/female-icon-7893.png";
+                    defaultIcon.src = "/img/female-icon-7893.png";
                 } else if (json[i].posterGender == "Male") {
-                    defaultIcon.src = "../../img/male-icon-7907.jpg";
+                    defaultIcon.src = "/img/male-icon-7907.jpg";
                 } else {
-                    defaultIcon.src = "../../img/userLogo.png";
+                    defaultIcon.src = "/img/userLogo.png";
                 }
-                likeIcon.src = "../../img/likeIcon.png";
-                transportIcon.src = "../../img/carIcon.png";
+                likeIcon.src = "/img/likeIcon.png";
+                transportIcon.src = "/img/carIcon.png";
 
                 nameAndAge.innerText = json[i].posterName +"("+json[i].posterAge+")";
                 date.innerText = json[i].postDate;
@@ -103,10 +103,12 @@ window.onload = function() {
         .finally(() => {
             let footer = document.createElement("footer");
             let emptyDiv = document.createElement("div");
-            let teamName = document.createTextNode("By WAD groupC");
+            let nameDiv = document.createElement("div");            
+            nameDiv.textContent = "By WAD groupC";
+            nameDiv.style.textAlign = "center";
 
             footer.appendChild(emptyDiv);
-            footer.appendChild(teamName);
+            footer.appendChild(nameDiv);                
             footer.appendChild(emptyDiv);
         
             document.body.appendChild(footer);
