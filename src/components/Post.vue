@@ -1,7 +1,11 @@
 <template>
     <div class="post">
           <div class="postHead">
-            <img src="../assets/img/userLogo.png" class="UserLogo">
+            <img :src="post.posterGender === 'Male' 
+        ? require('../assets/img/male-icon-7907.jpg') 
+        : post.posterGender === 'Female' 
+        ? require('../assets/img/female-icon-7893.png')
+        : require('../assets/img/userLogo.png')" class="UserLogo">
             <p>{{ post.posterName +' ('+post.posterAge+')'}}</p>
             <p>{{ post.postDate }}</p>
           </div>
