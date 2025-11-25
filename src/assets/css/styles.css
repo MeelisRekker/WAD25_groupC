@@ -141,6 +141,20 @@ text {
     border-radius: 100%;
 }
 
+.carIconDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.carIcon {
+    width: 48px;
+    height: 48px;
+}
+.carIconDesignation {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+}
+
 .postHead ~ p{
     font-size: 2rem;
     color: #0b053d;
