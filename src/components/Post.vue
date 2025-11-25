@@ -7,7 +7,7 @@
         ? require('../assets/img/female-icon-7893.png')
         : require('../assets/img/userLogo.png')" class="UserLogo">
             <p>{{ post.posterName +' ('+post.posterAge+')'}}</p>
-            <p>{{ post.postDate }}</p>
+            <p class="postDate">{{ post.postDate }}</p>
           </div>
           <img :src="post.image">
           <p>{{ post.postMessage }}</p>
