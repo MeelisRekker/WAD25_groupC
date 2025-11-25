@@ -171,6 +171,7 @@ text {
 .post > img {
     border-radius: 20px;
     margin-top: 10px;
+    max-width: 99%;
 }
 .postMessage + img{
     margin: 1%;
