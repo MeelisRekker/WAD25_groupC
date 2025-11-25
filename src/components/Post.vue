@@ -9,7 +9,7 @@
             <p>{{ post.posterName +' ('+post.posterAge+')'}}</p>
             <p class="postDate">{{ post.postDate }}</p>
           </div>
-          <img :src="post.image">
+          <img :src="post.image" class="post img">
           <p>{{ post.postMessage }}</p>
           <button @click="addLike">
                 <img src="../assets/img/likeIcon.png" class="like">
