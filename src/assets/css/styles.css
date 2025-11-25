@@ -80,6 +80,9 @@ p {
   flex-direction: row;
   font-size: 25px;
 }
+text {
+  font-size: 25px;
+}
 .loginBtn {
   margin-bottom: 20px;
   background-color: blue;

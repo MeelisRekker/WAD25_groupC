@@ -11,10 +11,10 @@
           </div>
           <img :src="post.image">
           <p>{{ post.postMessage }}</p>
-          <button @click="addLike">
+          <button @click="addLike" alignment="middle">
                 <img src="../assets/img/likeIcon.png" class="like">
-          </button>
-          <p class="numberOfLikes">{{ post.postLikes }}</p>          
+                <text class="numberOfLikes">{{ post.postLikes }}</text>
+          </button>      
         </div>
 </template>
 
@@ -32,3 +32,6 @@ export default {
   },
 }        
 </script>
+
+<style>
+</style>
