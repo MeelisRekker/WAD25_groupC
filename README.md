@@ -17,3 +17,22 @@
 ## JSON
 - https://api.jsonbin.io/v3/b/690a278b43b1c97be9988aed?meta=false
 - Validation green at JSONLint website
+
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
