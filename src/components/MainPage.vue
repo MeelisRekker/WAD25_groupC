@@ -26,9 +26,7 @@ export default {
       return this.$store.state.posts;
     }
   },
-  mounted() {
-    this.$store.dispatch('fetchPosts');   
-  },
+
   methods: {
     resetLikes() {
       this.$store.commit("resetLikes");
