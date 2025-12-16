@@ -141,14 +141,20 @@ text {
     border-radius: 100%;
 }
 
+.ikoonid {
+    margin-left: 150px;
+}
+
 .carIconDiv {
     display: flex;
     flex-direction: row;
     align-items: center;
+    float: left;
 }
 .carIcon {
     width: 48px;
     height: 48px;
+    display: flex;
 }
 .carIconDesignation {
     font-family: 'Times New Roman', Times, serif;

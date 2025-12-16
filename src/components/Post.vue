@@ -11,6 +11,7 @@
           </div>
           <img :src="post.image" class="post img">
           <p>{{ post.postMessage }}</p>
+          <div class="ikoonid">
           <button @click="addLike">
                 <img src="../assets/img/likeIcon.png" class="like">
                 <text class="numberOfLikes"> {{ post.postLikes }}</text>
@@ -22,8 +23,8 @@
           <div v-if="post.posterTransport == 'yes'"  class="carIconDiv">
               <img class="carIcon" src="../assets/img/carIcon.png" style="background:green;" >
               <p class="carIconDesignation">{{ post.posterDesignation }}</p>
-            </div>
-              
+          </div>
+          </div>              
         </div>
 </template>
 
